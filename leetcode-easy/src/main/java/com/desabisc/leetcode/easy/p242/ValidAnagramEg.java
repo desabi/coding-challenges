@@ -4,6 +4,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class ValidAnagramEg {
+
+    public static void main(String[] args) {
+        Boolean test1 = isValidAnagramB("anagram", "nagaram");
+        //Boolean test2 = isValidAnagram("car", "rat");
+    }
+
     public static Boolean isValidAnagramA(String s, String t) {
         if (s.length() == t.length()) {
             char[] sCharArray = s.toCharArray();
@@ -21,20 +27,29 @@ public class ValidAnagramEg {
     }
 
     public static Boolean isValidAnagramB(String s, String t) {
+
+        if (s.length() != t.length()) {
+            return Boolean.FALSE;
+        }
+
         // Create a hashmap to store character frequencies
         HashMap<Character, Integer> charCount = new HashMap<>();
 
         // Count frequency of each character in string s1
-        for (char currentSChar : s.toCharArray())
-            charCount.put(currentSChar, charCount.getOrDefault(currentSChar, 0) + 1);
+        for (char currentSChar : s.toCharArray()) {
+            int value = charCount.getOrDefault(currentSChar, 0) + 1;
+            charCount.put(currentSChar, value);
+        }
 
         // Count frequency of each character in string s2
-        for (char currentTChar : t.toCharArray())
-            charCount.put(currentTChar, charCount.getOrDefault(currentTChar, 0) - 1);
+        for (char currentTChar : t.toCharArray()) {
+            int value = charCount.getOrDefault(currentTChar, 0) - 1;
+            charCount.put(currentTChar, value);
+        }
 
         // Check if all frequencies are zero
-        for (var pair : charCount.entrySet()) {
-            if (pair.getValue() != 0) {
+        for (var entry : charCount.entrySet()) {
+            if (entry.getValue() != 0) {
                 return false;
             }
         }
@@ -77,8 +92,4 @@ public class ValidAnagramEg {
         return Boolean.TRUE;
     }
 
-    public static void main(String[] args) {
-        Boolean test1 = isValidAnagramB("beg", "gbe");
-        //Boolean test2 = isValidAnagram("car", "rat");
-    }
 }
