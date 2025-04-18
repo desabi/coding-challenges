@@ -18,7 +18,10 @@ public class TwoPointersEg {
     char[] s1 = new char[] {'a', 'b', 'c', 'd', 'e'};
     char[] s2 = new char[] {'h', 'e', 'l', 'l', 'o'};
     char[] s3 = new char[] {'H', 'a', 'n', 'n', 'a', 'h'};
-    System.out.println("Result: " + Arrays.toString(reverse(s3)));;
+    //System.out.println("Result: " + Arrays.toString(reverse(s3)));
+
+    String s = "A man, a plan, a canal: Panama";
+    System.out.println(isPalindrome(s));
   }
 
   /**
@@ -69,5 +72,41 @@ public class TwoPointersEg {
       rightPointer--; // move backward from the end
     }
     return chars;
+  }
+
+  /**
+   * Given a string s, determine if it is a palindrome, considering only alphanumeric characters
+   * and ignoring cases.
+   *
+   * @param s the string
+   * @return a boolean value
+   */
+  static boolean isPalindrome(String s) {
+    // initialize two pointers
+    int leftPointer = 0;
+    int rightPointer = s.length() - 1;
+
+    while (leftPointer < rightPointer) {
+      // move left pointer to the right if it is not alphanumeric
+      while (leftPointer < rightPointer && !Character.isLetterOrDigit(s.charAt(leftPointer))) {
+        leftPointer++;
+      }
+
+      // move right pointer to the left it it is not alphanumeric
+      while (leftPointer < rightPointer && !Character.isLetterOrDigit(s.charAt(rightPointer))) {
+        rightPointer--;
+      }
+
+      // compare characters (case sensitive)
+      if (Character.toLowerCase(s.charAt(leftPointer)) != Character.toLowerCase(s.charAt(rightPointer))) {
+        return false;
+      }
+
+      // move both pointers inward
+      leftPointer++;
+      rightPointer--;
+    }
+
+    return true;
   }
 }
