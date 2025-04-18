@@ -8,6 +8,10 @@ public class PrefixSumEg {
         exampleA(numbers);
     }
 
+    /**
+     * You want to quickly find the sum between any two indices, say from index 1 to 3.
+     * @param numbers
+     */
     static void exampleA(int[] numbers) {
         // Create prefix sum array
         int[] prefixSum = new int[numbers.length];
@@ -15,10 +19,11 @@ public class PrefixSumEg {
         // put the firs element of numbers in the prefix array
         prefixSum[0] = numbers[0];
 
+        // populate the prefixSum array with the sum of the values of the numbers array
         for (int index = 1; index < numbers.length; index++) {
             int prefixSumPreviousNumber = prefixSum[index - 1];
-            int currentNumber = numbers[index];
-            prefixSum[index] = prefixSumPreviousNumber + currentNumber;
+            int numbersCurrentNumber = numbers[index];
+            prefixSum[index] = prefixSumPreviousNumber + numbersCurrentNumber;
         }
 
         // Print the prefix sum array
@@ -29,6 +34,7 @@ public class PrefixSumEg {
         System.out.println();
 
         // Example: Get sum between index 1 and 3 (inclusive)
+        // Subtraction removes the part we do not want: left - 1
         int left = 1;
         int right = 3;
         int sum = prefixSum[right] - (left > 0 ? prefixSum[left - 1] : 0);
