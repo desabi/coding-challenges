@@ -12,6 +12,9 @@ public class ReverseString {
     char[] s3 = new char[] {'H', 'a', 'n', 'n', 'a', 'h'};
 
     reverseString(s1);
+    System.out.println(s1);
+
+    reverseString(s1);
     reverseString(s2);
     reverseString(s3);
   }
@@ -30,6 +33,5 @@ public class ReverseString {
       leftPointer++;  // move forward from the beginning
       rightPointer--; // move backward from the end
     }
-    System.out.println(chars);
   }
 }
