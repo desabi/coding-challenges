@@ -1,4 +1,4 @@
-package com.desabisc.leetcode.easy.p1480;
+package com.desabisc.leetcode.easy.prefixsum.p1480;
 
 import java.util.Arrays;
 

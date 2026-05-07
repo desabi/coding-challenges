@@ -1,4 +1,4 @@
-package com.desabisc.leetcode.easy.p23;
+package com.desabisc.leetcode.easy.twopointers.p23;
 
 import java.util.Arrays;
 

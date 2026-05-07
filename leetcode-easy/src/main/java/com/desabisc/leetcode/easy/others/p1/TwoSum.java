@@ -1,11 +1,11 @@
-package com.desabisc.leetcode.easy.arrayhashing.p1;
+package com.desabisc.leetcode.easy.others.p1;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Arrays & Hashing.
+ * Topics: Junior, Array, Hash Table
  * https://leetcode.com/problems/two-sum/description/
  */
 public class TwoSum {

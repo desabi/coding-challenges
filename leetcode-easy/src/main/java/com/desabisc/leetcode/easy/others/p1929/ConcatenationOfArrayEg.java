@@ -1,5 +1,9 @@
-package com.desabisc.leetcode.easy.p1929;
+package com.desabisc.leetcode.easy.others.p1929;
 
+/**
+ * https://leetcode.com/problems/concatenation-of-array/description/
+ * Topics: Mid-Level, Array, Simulation, Weekly Contest 249
+ */
 public class ConcatenationOfArrayEg {
 
     private static int[] concatenationOfArray(int[] nums) {

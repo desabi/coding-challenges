@@ -1,8 +1,12 @@
-package com.desabisc.leetcode.easy.p242;
+package com.desabisc.leetcode.easy.others.p242;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * https://leetcode.com/problems/valid-anagram/description/
+ * Topics: Hash Table, String, Sorting
+ */
 public class ValidAnagramEg {
 
     public static void main(String[] args) {

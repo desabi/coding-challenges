@@ -1,7 +1,11 @@
-package com.desabisc.leetcode.easy.arrayhashing.p217;
+package com.desabisc.leetcode.easy.others.p217;
 
 import java.util.HashSet;
 
+/**
+ * https://leetcode.com/problems/contains-duplicate/description/
+ * Topics: Array, Hash Table, Sorting
+ */
 public class ContainsDuplicate {
   public static void main(String[] args) {
     int[] numbers = new int[] {1,2,3,1};

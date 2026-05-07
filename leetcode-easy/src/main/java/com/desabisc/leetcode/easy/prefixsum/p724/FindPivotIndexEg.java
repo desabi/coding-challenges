@@ -1,4 +1,4 @@
-package com.desabisc.leetcode.easy.p724;
+package com.desabisc.leetcode.easy.prefixsum.p724;
 
 /**
  * Topics: Array, Prefix Sum. <br>
